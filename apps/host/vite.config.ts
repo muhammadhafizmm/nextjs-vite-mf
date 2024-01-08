@@ -22,7 +22,7 @@ export default defineConfig({
         }
       },
       exposes: {},
-      shared: [],
+      shared: ['react', 'react-dom'],
     }),
   ],
   build: {

@@ -7,11 +7,11 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   const CustomButton = lazy(() => import("remote/components/CustomButton"));
-  const TestButton = lazy(() => import("efi_remote/components/TestButton"));
   const RemoteAppProvider = lazy(
     () => import("efi_remote/features/RemoteAppProvider")
   );
-  const ButtonBox = lazy(() => import("efi_remote/components/ButtonBox"));
+  const BaseText = lazy(() => import("efi_remote/components/BaseText"));
+  // const ButtonBox = lazy(() => import("efi_remote/components/ButtonBox"));
 
   return (
     <Suspense fallback="loading">
@@ -36,11 +36,29 @@ function App() {
             <CustomButton />
           </Suspense>
           <Suspense fallback={<div>Loading...</div>}>
-            <TestButton />
+            <BaseText
+              data={{
+                id: "test-base-text",
+                type: "line-text",
+                contents: "Text from Remote Growth App",
+                properties: {},
+              }}
+            />
           </Suspense>
           {/* <Suspense fallback={<div>Loading...</div>}>
-              <ButtonBox />
-            </Suspense> */}
+            <ButtonBox
+              data={{
+                id: "test-button-id",
+                type: "buttonbox",
+                contents: {
+                  label: "Button Label",
+                  action: "path",
+                  path: "/",
+                },
+                properties: {},
+              }}
+            />
+          </Suspense> */}
         </div>
         <p className="read-the-docs">
           Click on the Vite and React logos to learn more

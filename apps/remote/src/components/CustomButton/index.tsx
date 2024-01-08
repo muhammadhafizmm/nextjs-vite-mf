@@ -3,12 +3,12 @@ import { Button } from "@repo/ui/button";
 
 const CustomButton = () => {
   return (
-    // <Box>
-      // <Heading as="h2">Wrapped in One Fish Component</Heading>
+    <Box>
+      <Heading as="h2">Wrapped in OneFish Component</Heading>
       <Button appName="web" className={""}>
-        Click me!
+        Click this Button! (from Remote App)
       </Button>
-    // </Box>
+    </Box>
   );
 };
 
