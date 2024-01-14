@@ -15,11 +15,11 @@ export default defineConfig({
           from: "webpack",
           format: "var"
         },
-        efi_remote: {
-          external: "/growth-remote/_next/static/chunks/remoteEntry.js",
-          from: "webpack",
-          format: "var"
-        }
+        // efi_remote: {
+        //   external: "/growth-remote/_next/static/chunks/remoteEntry.js",
+        //   from: "webpack",
+        //   format: "var"
+        // }
       },
       exposes: {},
       shared: ['react', 'react-dom'],
